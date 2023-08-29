@@ -1,18 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite/**/*.js",
+    "./node_modules/tailwind-datepicker-react/dist/**/*.js",
   ],
   theme: {
     extend: {
+      width: {
+        120: "30rem",
+        160: "40rem",
+      },
+      zIndex: {
+        60: "60",
+        70: "70",
+        80: "80",
+        90: "90",
+        100: "100",
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/forms")],
+};
